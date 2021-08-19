@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "RASuite">
+
+	<listeners>
+		<listener class-name="resources.ExtentReporterNG"></listener>
+	</listeners>
+	
+	<test name = "RATest">
+		<classes>
+			<class name="com.restassured.workshop.RestAssuredJPMC.restcountries.Get_Language_And_Currency"></class>
+		</classes>
+	</test>
+
+</suite>

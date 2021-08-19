@@ -37,8 +37,8 @@ public class Boards extends Base{
 			.queryParam("name", name)
 		.when()
 			.post("/1/boards/");
-		
-		return res.jsonPath().getString("id");
+				return res.jsonPath().getString("id");
+
 	}
 
 	public static String getListIDByListName(String listname, String boardid) {

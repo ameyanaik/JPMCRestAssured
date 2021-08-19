@@ -19,7 +19,7 @@ public class Create_Cards_Test extends Base{
 		
 		//1. Create a New Board
 		//2. Get the ID of the New Board
-		String newboardid = Boards.createBoardAndReturnID("RABoard_2");
+		String newboardid = Boards.createBoardAndReturnID("RABoard_100");
 		System.out.println(newboardid);
 		//String newboardid = "611e01bb2af15f3db0ad656d";
 		
