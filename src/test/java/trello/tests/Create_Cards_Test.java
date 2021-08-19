@@ -25,7 +25,7 @@ public class Create_Cards_Test extends Base{
 		//4. Add a new Card to the above list
 		int status = Cards.addNewCardToList(todolistid, "Learning RestAssured");
 		System.out.println(status);
-		Assert.assertEquals(status, 200);
+		Assert.assertEquals(status, 200); 
 		
 	}
 
