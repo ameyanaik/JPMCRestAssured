@@ -20,11 +20,11 @@ public class Base {
 		
 		commonspec = new RequestSpecBuilder()
 				.setBaseUri("https://api.trello.com")
+				.setProxy("127.0.01", 8080)
 				.setContentType(ContentType.JSON)
 				.addQueryParam("key", Utilities.getProperty("trellokey"))
 				.addQueryParam("token", Utilities.getProperty("trellotoken"))
 				.build();
 	}
-	
 	
 }

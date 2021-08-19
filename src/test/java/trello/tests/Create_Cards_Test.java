@@ -1,9 +1,13 @@
 package trello.tests;
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import trello.common.Base;
+import trello.common.ExcelReader;
 import trello.functions.Boards;
 import trello.functions.Cards;
 import trello.functions.TrelloMembers;
@@ -30,7 +34,7 @@ public class Create_Cards_Test extends Base{
 
 	}
 	
-	@Test
+	@Test (dataProvider = "getTestDataFromExcel")
 	public void testCreateCardInExistingBoardDataDriven(String Boardname, String ListName, String CardTitle) {
 		
 		//1. Get Board ID of an existing Board by name
@@ -47,6 +51,11 @@ public class Create_Cards_Test extends Base{
 		System.out.println(status);
 		Assert.assertEquals(status, 200); 
 
+	}
+	
+	@DataProvider
+	public Object[][] getTestDataFromExcel() throws IOException {
+		return ExcelReader.readExcelData("src/test/java/trello/resources/testdata.xlsx");
 	}
 
 }
